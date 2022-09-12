@@ -1,0 +1,155 @@
+@mixin resetDefault {
+    margin: 0;
+    padding: 0;
+    // border-box ist verdammt wichtig, damit padding/margin etc. von Inhalten innerhalb des Containers contained sind und den äußeren Umfang des Containers nicht vergrößern!
+    box-sizing: border-box;
+    font-size: 62, 5%;
+}
+
+*,
+*::before,
+*::after {
+    @include resetDefault;
+}
+
+#title {
+    background: rgba(255, 0, 97, 1);
+    padding: 0 100px;
+    height: 670px;
+}
+
+#header-title {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#cute-dog {
+    transform: translate(150px, 50px) rotate(25deg);
+}
+
+#features {
+    height: 400px;
+}
+
+.bi-check-circle-fill,
+.bi-record-circle,
+.bi-suit-heart-fill {
+    font-size: 4rem;
+    color: rgb(255, 109, 109);
+}
+
+#testimonials {
+    background: rgb(255, 109, 109);
+    height: 600px;
+}
+
+.testimonial-text {
+    font-size: 3rem;
+    padding: 50px 200px;
+}
+
+.testimonial-image {
+    border-radius: 50%;
+    width: 150px;
+}
+
+#press {
+    background: rgb(255, 109, 109);
+    height: 200px;
+}
+
+.card {
+    width: 400px !important;
+}
+
+.press-img {
+    width: 350px;
+}
+
+.card-title {
+    font-size: 3rem;
+}
+
+#cta {
+    background: rgba(255, 0, 97, 1);
+    height: 500px;
+}
+
+.cta-slogan {
+    font-size: 3rem;
+    padding: 100px;
+}
+
+#footer {
+    height: 250px;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    #title {
+        padding: 10 50px;
+    }
+
+    #header-title {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    #header-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    #cute-dog {
+        transform: translateY(-200px) scale(0.5);
+    }
+
+    .testimonial-text {
+        font-size: 2.5rem;
+    }
+
+    .testimonial-image {
+        border-radius: 50%;
+        width: 80px;
+    }
+
+    .press-img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+
+    #title {
+        height: 1200px;
+    }
+
+    #cute-dog {
+        transform: scale(0.5) rotate(360deg);
+    }
+
+    #features {
+        height: 600px;
+    }
+
+    #testimonials {
+        height: 400px;
+    }
+
+    .testimonial-text {
+        font-size: 1.5rem;
+    }
+
+    .testimonial-image {
+        border-radius: 50%;
+        width: 40px;
+    }
+
+    #press {
+        height: 100px;
+    }
+
+    .press-img {
+        width: 100px;
+    }
+}
